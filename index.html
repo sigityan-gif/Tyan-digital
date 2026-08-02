@@ -1,127 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bisnis Online untuk Pemula | E-book</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tyan Digital — Bisnis Online untuk Pemula</title>
+<meta name="description" content="E-book praktis untuk memulai bisnis online dari nol. Harga promo Rp59.000, lengkap dengan bonus template.">
 <style>
-:root{--primary:#17324d;--accent:#f59e0b;--light:#f5f8fa;--text:#263238;--muted:#607d8b}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
-.container{width:min(1100px,92%);margin:auto}.hero{background:linear-gradient(135deg,#eaf3f7,#fff7e6);padding:70px 0 55px}
-.badge{display:inline-block;background:#fff1cc;color:#8a5a00;padding:7px 14px;border-radius:999px;font-weight:700;font-size:14px}
-h1{font-size:clamp(36px,6vw,64px);line-height:1.05;color:var(--primary);margin:18px 0}.hero p{font-size:18px;max-width:650px;color:#455a64}
-.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:15px 25px;border-radius:10px;font-weight:700;border:0;cursor:pointer;font-size:16px;box-shadow:0 8px 20px #f59e0b33}
-.btn:hover{transform:translateY(-1px)}.price{margin:22px 0}.old{text-decoration:line-through;color:#78909c;font-size:18px}.new{font-size:34px;font-weight:800;color:#d97706;margin-left:8px}
-section{padding:60px 0}.section-title{text-align:center;color:var(--primary);font-size:32px;margin:0 0 12px}.section-sub{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 35px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.card{background:#fff;border:1px solid #e1e8ed;border-radius:16px;padding:24px;box-shadow:0 8px 25px #17324d0d}.card h3{color:var(--primary);margin-top:0}
-.cover{background:var(--primary);color:#fff;border-radius:20px;padding:45px;text-align:center;min-height:350px;display:flex;flex-direction:column;justify-content:center}.cover h2{font-size:40px;margin:0 0 12px}.cover p{font-size:18px}
-.bonus{background:var(--light)}.steps{counter-reset:step}.step{position:relative;padding-left:55px}.step:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;text-align:center;line-height:38px;font-weight:bold}
-.checkout{background:#f8fafb}.checkout-box{max-width:650px;margin:auto;background:#fff;border-radius:18px;padding:30px;box-shadow:0 10px 35px #17324d18}.field{margin-bottom:15px}.field label{display:block;font-weight:700;margin-bottom:6px}.field input{width:100%;padding:13px;border:1px solid #cfd8dc;border-radius:8px;font-size:16px}.bank{background:#eef6fa;border-radius:12px;padding:18px;margin:20px 0}.bank strong{color:var(--primary)}
-footer{background:var(--primary);color:#fff;text-align:center;padding:28px}.small{font-size:13px;color:#78909c}.wa{position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;border-radius:50px;padding:14px 20px;text-decoration:none;font-weight:bold;box-shadow:0 8px 25px #0003}
-@media(max-width:600px){.hero{padding:45px 0}.cover{padding:30px}.cover h2{font-size:30px}.new{display:block;margin:5px 0}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:#24313b;background:#fff;line-height:1.6}.wrap{width:min(1100px,92%);margin:auto}
+.hero{padding:58px 0 70px;background:linear-gradient(135deg,#eaf4f8,#fff7df)}.tag{display:inline-block;background:#fff0c4;color:#805600;padding:7px 14px;border-radius:99px;font-weight:800;font-size:13px}
+h1{font-size:clamp(40px,7vw,70px);line-height:1.02;color:#16324b;margin:18px 0}.lead{font-size:19px;max-width:720px;color:#536873}.price{margin:24px 0}.old{text-decoration:line-through;color:#78909c}.new{display:block;color:#d97706;font-size:40px;font-weight:900}
+.btn{display:inline-block;border:0;border-radius:12px;padding:15px 24px;background:#f59e0b;color:#fff;text-decoration:none;font-weight:800;cursor:pointer;font-size:16px;box-shadow:0 8px 24px #f59e0b33}.btn.green{background:#16a34a}.btn.dark{background:#16324b}
+section{padding:65px 0}.light{background:#f6f9fb}.title{text-align:center;color:#16324b;font-size:32px;margin:0 0 10px}.sub{text-align:center;color:#607d8b;max-width:720px;margin:0 auto 36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.card{background:#fff;border:1px solid #e2e9ed;border-radius:18px;padding:23px;box-shadow:0 8px 28px #16324b0c}.card h3{margin-top:0;color:#16324b}
+.book{background:#16324b;color:#fff;border-radius:22px;padding:42px;min-height:360px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 18px 45px #16324b33}.book small{opacity:.8}.book h2{font-size:42px;line-height:1.1;margin:10px 0}.book .line{width:70px;height:5px;background:#f59e0b;border-radius:99px}
+.offer{max-width:760px;margin:auto;border:2px solid #f3c55b;border-radius:20px;background:#fffdf5;padding:28px}.offer li{margin:9px 0}
+.steps{counter-reset:n}.step{position:relative;padding-left:65px}.step:before{counter-increment:n;content:counter(n);position:absolute;left:20px;top:22px;width:34px;height:34px;line-height:34px;text-align:center;background:#f59e0b;color:#fff;border-radius:50%;font-weight:900}
+.checkout{background:#eef5f8}.box{max-width:700px;margin:auto;background:#fff;padding:28px;border-radius:20px;box-shadow:0 14px 45px #16324b18}.notice{background:#fff4d6;color:#6a4d00;padding:13px;border-radius:10px;margin-bottom:18px}.bank{background:#eef7fb;border-radius:14px;padding:20px;margin:18px 0}.row{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid #d7e5eb;padding:9px 0}.row:last-child{border-bottom:0}.copy{margin-top:12px;padding:9px 13px;border:1px solid #b8cbd5;border-radius:9px;background:#fff;font-weight:800;cursor:pointer}
+.field{margin:14px 0}.field label{display:block;font-weight:800;margin-bottom:6px}.field input{width:100%;padding:13px;border:1px solid #ccd8de;border-radius:9px;font-size:16px}.small{font-size:13px;color:#78909c}.faq details{border-bottom:1px solid #dce5e9;padding:15px 0}.faq summary{cursor:pointer;font-weight:800;color:#16324b}
+footer{background:#16324b;color:#fff;padding:30px 0;text-align:center}.wa{position:fixed;right:17px;bottom:17px;background:#25D366;color:#fff;text-decoration:none;padding:14px 20px;border-radius:99px;font-weight:900;box-shadow:0 8px 25px #0003;z-index:9}
+@media(max-width:600px){.hero{padding:43px 0 55px}.book{padding:30px}.book h2{font-size:32px}.row{align-items:center}.copy{white-space:nowrap}}
 </style>
 </head>
 <body>
-
 <header class="hero">
-<div class="container">
-<span class="badge">E-BOOK PRAKTIS UNTUK PEMULA</span>
+<div class="wrap">
+<span class="tag">🔥 PROMO TERBATAS — HARGA KHUSUS</span>
 <h1>Bisnis Online<br>untuk Pemula</h1>
-<p>Panduan praktis untuk kamu yang ingin memulai bisnis online dari nol—dengan bahasa santai, langkah sederhana, dan template siap pakai.</p>
-<div class="price"><span class="old">Rp79.000</span><span class="new">Rp59.000</span></div>
-<a class="btn" href="#checkout">Beli E-book Sekarang</a>
+<p class="lead">Panduan praktis untuk kamu yang ingin memulai bisnis online dari nol. Belajar memilih ide, menentukan target pasar, membuat penawaran, mendapatkan pelanggan pertama, dan menjalankan rencana 30 hari.</p>
+<div class="price"><span class="old">Harga normal Rp79.000</span><span class="new">Rp59.000</span></div>
+<a class="btn" href="#checkout">🚀 Mulai Sekarang</a>
 </div>
 </header>
 
-<section>
-<div class="container">
+<section><div class="wrap"><div class="grid">
+<div class="book"><small>E-BOOK PRAKTIS</small><h2>BISNIS ONLINE<br>UNTUK PEMULA</h2><div class="line"></div><p>Mulai dari nol. Belajar. Praktik. Evaluasi. Bertumbuh.</p></div>
+<div><h2 class="title" style="text-align:left">Kamu tidak perlu menunggu sempurna.</h2><p>Kalau kamu selama ini ingin memulai bisnis online tetapi bingung harus mulai dari mana, e-book ini dibuat untuk kamu.</p>
+<div class="card"><b>✓ Bahasa santai</b><br>Mudah dipahami bahkan jika kamu benar-benar pemula.</div><br>
+<div class="card"><b>✓ Langkah praktis</b><br>Fokus pada hal yang bisa langsung kamu kerjakan.</div><br>
+<div class="card"><b>✓ Bonus siap pakai</b><br>Template untuk membantu kamu bergerak lebih cepat.</div></div>
+</div></div></section>
+
+<section class="light"><div class="wrap"><h2 class="title">Apa yang Akan Kamu Pelajari?</h2><p class="sub">Fondasi penting untuk memulai bisnis online dengan lebih terarah.</p>
 <div class="grid">
-<div class="cover"><h2>Mulai dari Nol</h2><p>Pilih ide. Tentukan target pasar. Buat penawaran. Dapatkan pelanggan pertama.</p></div>
-<div>
-<h2 class="section-title" style="text-align:left">Apa yang akan kamu pelajari?</h2>
-<p>Di dalam e-book ini kamu akan dipandu memahami dasar bisnis online sampai memiliki rencana aksi yang bisa langsung dijalankan.</p>
-<div class="card"><b>✓ Memilih model bisnis online</b></div><br>
-<div class="card"><b>✓ Menemukan ide yang bisa dijual</b></div><br>
-<div class="card"><b>✓ Menentukan target pasar</b></div><br>
-<div class="card"><b>✓ Membuat produk & penawaran</b></div><br>
-<div class="card"><b>✓ Mendapatkan pelanggan pertama</b></div>
-</div>
-</div>
-</div>
-</section>
+<div class="card"><h3>01 — Mindset</h3><p>Berhenti menunda dan mulai mengambil tindakan.</p></div>
+<div class="card"><h3>02 — Model Bisnis</h3><p>Kenali pilihan bisnis online untuk pemula.</p></div>
+<div class="card"><h3>03 — Ide Bisnis</h3><p>Temukan masalah yang bisa kamu bantu selesaikan.</p></div>
+<div class="card"><h3>04 — Target Pasar</h3><p>Tentukan siapa calon pelanggan yang paling tepat.</p></div>
+<div class="card"><h3>05 — Produk</h3><p>Buat produk atau penawaran yang jelas.</p></div>
+<div class="card"><h3>06 — Promosi</h3><p>Gunakan konten untuk membangun perhatian dan kepercayaan.</p></div>
+<div class="card"><h3>07 — Penjualan</h3><p>Pelajari cara mendapatkan pelanggan pertama.</p></div>
+<div class="card"><h3>08 — Rencana 30 Hari</h3><p>Ubah pengetahuan menjadi tindakan harian.</p></div>
+</div></div></section>
 
-<section class="bonus">
-<div class="container">
-<h2 class="section-title">🎁 Bonus yang Kamu Dapatkan</h2>
-<p class="section-sub">Bukan hanya e-book. Kamu juga mendapatkan template praktis untuk membantu memulai.</p>
-<div class="grid">
-<div class="card"><h3>Template Profil Bisnis</h3><p>Bantu susun profil bisnis agar calon pelanggan langsung memahami apa yang kamu tawarkan.</p></div>
-<div class="card"><h3>Template Caption Promosi</h3><p>Kerangka caption untuk memperkenalkan dan menawarkan produk dengan lebih jelas.</p></div>
-<div class="card"><h3>Template Chat Pelanggan</h3><p>Contoh percakapan untuk merespons calon pelanggan dengan sopan dan profesional.</p></div>
-<div class="card"><h3>Template Riset Pasar</h3><p>Catat target, masalah, kebutuhan, keberatan, dan solusi yang bisa kamu tawarkan.</p></div>
-<div class="card"><h3>Checklist Bisnis Online</h3><p>Daftar langkah untuk membantu kamu mengetahui apa saja yang sudah dan belum dikerjakan.</p></div>
-<div class="card"><h3>Rencana 30 Hari</h3><p>Panduan aktivitas sederhana agar kamu tidak berhenti hanya di tahap belajar.</p></div>
-</div>
-</div>
-</section>
+<section><div class="wrap"><h2 class="title">🎁 Bonus yang Kamu Dapatkan</h2><p class="sub">Nilai lebih untuk membantu kamu mulai dengan lebih cepat.</p>
+<div class="offer"><ul>
+<li>Template Profil Bisnis</li><li>Template Caption Promosi</li><li>Template Chat Calon Pelanggan</li><li>Template Riset Pasar</li><li>Checklist Bisnis Online dari Nol</li><li>Rencana Aksi 30 Hari</li>
+</ul></div></div></section>
 
-<section>
-<div class="container">
-<h2 class="section-title">Cara Membeli</h2>
-<p class="section-sub">Proses sederhana. Setelah transfer, kirim bukti pembayaran melalui WhatsApp admin.</p>
-<div class="grid">
-<div class="card step"><h3>Pilih Produk</h3><p>Klik tombol beli dan isi data pembelian.</p></div>
-<div class="card step"><h3>Lakukan Transfer</h3><p>Transfer sesuai harga promo ke rekening yang tertera.</p></div>
-<div class="card step"><h3>Konfirmasi</h3><p>Kirim bukti transfer melalui WhatsApp admin.</p></div>
-<div class="card step"><h3>Terima Produk</h3><p>Admin akan memproses pesanan dan mengirimkan e-book sesuai proses yang berlaku.</p></div>
-</div>
-</div>
-</section>
+<section class="light"><div class="wrap"><h2 class="title">Cara Membeli</h2><p class="sub">Empat langkah sederhana untuk mendapatkan e-book.</p>
+<div class="grid steps"><div class="card step"><h3>Isi Data</h3><p>Masukkan nama dan kontak pada checkout.</p></div><div class="card step"><h3>Transfer</h3><p>Transfer Rp59.000 ke rekening BRI.</p></div><div class="card step"><h3>Konfirmasi</h3><p>Kirim bukti transfer melalui WhatsApp.</p></div><div class="card step"><h3>Pesanan Diproses</h3><p>Setelah pembayaran diverifikasi, produk diproses.</p></div></div></div></section>
 
-<section id="checkout" class="checkout">
-<div class="container">
-<h2 class="section-title">Checkout E-book</h2>
-<p class="section-sub">Isi data berikut, lalu klik tombol WhatsApp untuk melakukan konfirmasi pembelian.</p>
-<div class="checkout-box">
-<div class="bank">
-<strong>Detail Pembayaran</strong><br><br>
-Bank: <strong>BRI</strong><br>
-Nomor Rekening: <strong>371901025317531</strong><br>
-Nama Pemilik: <strong>Sigit Riyanto</strong><br>
-Harga Promo: <strong>Rp59.000</strong>
-</div>
-<div class="field"><label>Nama Anda</label><input id="nama" placeholder="Masukkan nama"></div>
-<div class="field"><label>Email / Kontak</label><input id="kontak" placeholder="Email atau nomor WhatsApp"></div>
-<button class="btn" onclick="konfirmasi()">Konfirmasi Pembelian via WhatsApp</button>
-<p class="small">Pastikan Anda sudah melakukan transfer sebelum mengirim konfirmasi pembayaran.</p>
-</div>
-</div>
-</section>
+<section id="checkout" class="checkout"><div class="wrap"><h2 class="title">Checkout Sekarang</h2><p class="sub">Isi data berikut. Setelah transfer, klik tombol WhatsApp dan kirim bukti pembayaran.</p>
+<div class="box">
+<div class="notice">💡 <b>Harga promo Rp59.000.</b> Pastikan nominal transfer sesuai.</div>
+<div class="bank"><h3 style="color:#16324b;margin-top:0">🏦 Rekening Pembayaran</h3>
+<div class="row"><span>Bank</span><strong>BRI</strong></div>
+<div class="row"><span>Nomor Rekening</span><strong id="rek">371901025317531</strong></div>
+<div class="row"><span>Nama Pemilik</span><strong>Sigit Riyanto</strong></div>
+<div class="row"><span>Total</span><strong style="color:#d97706">Rp59.000</strong></div>
+<button class="copy" onclick="copyRek()">📋 Salin Nomor Rekening</button></div>
+<div class="field"><label>Nama Pembeli</label><input id="nama" placeholder="Masukkan nama lengkap"></div>
+<div class="field"><label>Nomor WhatsApp / Email</label><input id="kontak" placeholder="Masukkan kontak aktif"></div>
+<div class="field"><label>Catatan (opsional)</label><input id="catatan" placeholder="Contoh: Sudah transfer"></div>
+<button class="btn green" style="width:100%" onclick="wa()">📲 Konfirmasi Pembayaran via WhatsApp</button>
+<p class="small">Setelah WhatsApp terbuka, kirim bukti transfer pada chat tersebut. Admin akan memverifikasi pembayaran Anda.</p>
+</div></div></section>
 
-<footer>
-<div class="container">
-<strong>Bisnis Online untuk Pemula</strong><br>
-Mulai dari nol. Belajar. Praktik. Evaluasi. Bertumbuh.
-</div>
-</footer>
+<section class="faq"><div class="wrap"><h2 class="title">Pertanyaan Umum</h2><div style="max-width:750px;margin:auto">
+<details><summary>Apakah e-book cocok untuk pemula?</summary><p>Ya. Materinya disusun dengan bahasa santai dan dimulai dari dasar.</p></details>
+<details><summary>Bagaimana cara membayar?</summary><p>Pembayaran dilakukan melalui transfer manual ke rekening BRI yang tertera di halaman checkout.</p></details>
+<details><summary>Bagaimana cara konfirmasi?</summary><p>Setelah transfer, isi form checkout lalu klik tombol WhatsApp dan kirim bukti transfer kepada admin.</p></details>
+<details><summary>Kapan e-book diterima?</summary><p>Setelah pembayaran diverifikasi, admin akan memproses pengiriman produk sesuai prosedur yang berlaku.</p></details>
+</div></div></section>
 
-<a class="wa" href="https://wa.me/6282327310120" target="_blank">WhatsApp Admin</a>
+<footer><div class="wrap"><b>Tyan Digital</b><br>Bisnis Online untuk Pemula<br><span style="opacity:.7">Mulai dari nol dan ambil langkah pertama.</span></div></footer>
+<a class="wa" href="https://wa.me/6282327310120" target="_blank">💬 WhatsApp Admin</a>
 
 <script>
-const CONFIG={
-whatsappAdmin:"6282327310120",
-bankName:"BRI",
-accountNumber:"371901025317531",
-accountName:"Sigit Riyanto",
-normalPrice:"Rp79.000",
-promoPrice:"Rp59.000"
-};
-function konfirmasi(){
- const nama=document.getElementById("nama").value.trim();
- const kontak=document.getElementById("kontak").value.trim();
+const CONFIG={whatsappAdmin:"6282327310120",bankName:"BRI",accountNumber:"371901025317531",accountName:"Sigit Riyanto",promoPrice:"Rp59.000"};
+function copyRek(){navigator.clipboard.writeText(CONFIG.accountNumber).then(()=>alert("Nomor rekening berhasil disalin."));}
+function wa(){
+ const nama=document.getElementById("nama").value.trim(),kontak=document.getElementById("kontak").value.trim(),catatan=document.getElementById("catatan").value.trim();
  if(!nama||!kontak){alert("Silakan isi nama dan kontak terlebih dahulu.");return;}
- const pesan=`Halo Admin, saya ingin membeli E-book Bisnis Online untuk Pemula.%0A%0ANama: ${encodeURIComponent(nama)}%0AKontak: ${encodeURIComponent(kontak)}%0AHarga: ${encodeURIComponent(CONFIG.promoPrice)}%0A%0ASaya akan/sudah melakukan transfer ke ${CONFIG.bankName} ${CONFIG.accountNumber} a.n. ${encodeURIComponent(CONFIG.accountName)}.%0A%0AMohon informasi proses selanjutnya.`;
- window.open(`https://wa.me/${CONFIG.whatsappAdmin}?text=${pesan}`,"_blank");
+ const msg=`Halo Admin Tyan Digital,%0A%0ASaya ingin membeli E-book Bisnis Online untuk Pemula.%0A%0ANama: ${encodeURIComponent(nama)}%0AKontak: ${encodeURIComponent(kontak)}%0AHarga: ${CONFIG.promoPrice}%0AStatus: Sudah melakukan transfer.%0ACatatan: ${encodeURIComponent(catatan||"-")}%0A%0ABank: ${CONFIG.bankName}%0ANomor rekening: ${CONFIG.accountNumber}%0ANama pemilik: ${encodeURIComponent(CONFIG.accountName)}%0A%0ASaya akan mengirimkan bukti transfer di chat ini. Terima kasih.`;
+ window.open(`https://wa.me/${CONFIG.whatsappAdmin}?text=${msg}`,"_blank");
 }
 </script>
 </body>
