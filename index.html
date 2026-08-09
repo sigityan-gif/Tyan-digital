@@ -247,7 +247,7 @@ async function sendTyanAI(){
   box.innerHTML+="<p id='aiLoading'>🤖 Sedang menjawab...</p>";
 
   try{
-    const res=await fetch"https://tyan-ai-seller-api.sigityan.workers.dev/",{
+    const res=await fetch(TYAN_AI_API,{
       method:"POST",
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify({message:q})
