@@ -211,5 +211,59 @@ const TYAN_AI_API = "https://tyan-ai-seller-api.sigityan.workers.dev/";
 
 window.TYAN_AI_API = TYAN_AI_API;
   </script>
+<div id="tyanAI" style="position:fixed;right:15px;bottom:15px;z-index:9999">
+<button onclick="openTyanAI()" style="background:#d9aa1e;color:#071426;border:0;border-radius:50px;padding:15px 20px;font-weight:bold;font-size:16px">
+🤖 Tanya TYAN AI
+</button>
+</div>
+
+<div id="tyanAIBox" style="display:none;position:fixed;right:15px;bottom:80px;width:320px;max-width:90%;background:white;border-radius:18px;box-shadow:0 5px 25px #0005;z-index:10000;overflow:hidden">
+<div style="background:#071426;color:#d9aa1e;padding:15px;font-weight:bold">
+TYAN DIGITAL AI
+</div>
+<div id="tyanAIMessages" style="height:280px;overflow:auto;padding:12px;color:#111">
+Halo 👋 Saya TYAN DIGITAL AI. Ada yang bisa saya bantu?
+</div>
+<div style="display:flex;padding:10px;border-top:1px solid #ddd">
+<input id="tyanAIInput" placeholder="Tulis pertanyaan..." style="flex:1;padding:10px;border:1px solid #ccc;border-radius:10px">
+<button onclick="sendTyanAI()" style="margin-left:6px;background:#d9aa1e;border:0;border-radius:10px;padding:10px">Kirim</button>
+</div>
+</div>
+
+<script>
+function openTyanAI(){
+ const b=document.getElementById("tyanAIBox");
+ b.style.display=b.style.display==="none"?"block":"none";
+}
+
+async function sendTyanAI(){
+ const input=document.getElementById("tyanAIInput");
+ const box=document.getElementById("tyanAIMessages");
+ const q=input.value.trim();
+ if(!q)return;
+
+ box.innerHTML+="<p><b>Kamu:</b> "+q+"</p>";
+ input.value="";
+ box.innerHTML+="<p id='aiLoading'>🤖 Sedang menjawab...</p>";
+
+ try{
+   const res=await fetch(window.TYAN_AI_API,{
+     method:"POST",
+     headers:{"Content-Type":"application/json"},
+     body:JSON.stringify({message:q})
+   });
+
+   const data=await res.json();
+   document.getElementById("aiLoading").remove();
+
+   box.innerHTML+="<p><b>TYAN AI:</b> "+(data.message||data.response||"Maaf, belum ada jawaban.")+"</p>";
+ }catch(e){
+   document.getElementById("aiLoading").remove();
+   box.innerHTML+="<p><b>TYAN AI:</b> Koneksi AI belum tersedia.</p>";
+ }
+
+ box.scrollTop=box.scrollHeight;
+}
+</script>
 </body>
 </html>
