@@ -240,11 +240,11 @@ async function sendTyanAI(){
   const input=document.getElementById("tyanAIInput");
   const box=document.getElementById("tyanAIMessages");
   const q=input.value.trim();
-
   if(!q)return;
 
   box.innerHTML+="<p><b>Kamu:</b> "+q+"</p>";
   input.value="";
+  box.innerHTML+="<p id='aiLoading'>🤖 Sedang menjawab...</p>";
 
   try{
     const res=await fetch(window.TYAN_AI_API,{
@@ -254,15 +254,18 @@ async function sendTyanAI(){
     });
 
     const data=await res.json();
-    const jawaban=data.answer||data.response||data.message||"Maaf, belum ada jawaban.";
 
-    box.innerHTML+="<p><b>TYAN AI:</b> "+jawaban+"</p>";
-    box.scrollTop=box.scrollHeight;
+    document.getElementById("aiLoading").remove();
 
+    box.innerHTML+="<p><b>TYAN AI:</b> "+(data.message||data.error||"Tidak ada jawaban.")+"</p>";
   }catch(e){
-    box.innerHTML+="<p><b>TYAN AI:</b> Koneksi AI sedang bermasalah.</p>";
+    document.getElementById("aiLoading").remove();
+    box.innerHTML+="<p><b>TYAN AI:</b> Koneksi ke AI gagal.</p>";
   }
+
+  box.scrollTop=box.scrollHeight;
 }
+
  
 
  
