@@ -237,33 +237,38 @@ function openTyanAI(){
 }
 
 async function sendTyanAI(){
- const input=document.getElementById("tyanAIInput");
- const box=document.getElementById("tyanAIMessages");
- const q=input.value.trim();
- if(!q)return;
+  const input=document.getElementById("tyanAIInput");
+  const box=document.getElementById("tyanAIMessages");
+  const q=input.value.trim();
 
- box.innerHTML+="<p><b>Kamu:</b> "+q+"</p>";
- input.value="";
- box.innerHTML+="<p id='aiLoading'>🤖 Sedang menjawab...</p>";
+  if(!q)return;
 
- try{
-   const res=await fetch(window.TYAN_AI_API,{
-     method:"POST",
-     headers:{"Content-Type":"application/json"},
-     body:JSON.stringify({message:q})
-   });
+  box.innerHTML+="<p><b>Kamu:</b> "+q+"</p>";
+  input.value="";
 
-   const data=await res.json();
-   document.getElementById("aiLoading").remove();
+  try{
+    const res=await fetch(window.TYAN_AI_API,{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({message:q})
+    });
 
-   box.innerHTML+="<p><b>TYAN AI:</b> "+(data.message||data.response||"Maaf, belum ada jawaban.")+"</p>";
- }catch(e){
-   document.getElementById("aiLoading").remove();
-   box.innerHTML+="<p><b>TYAN AI:</b> Koneksi AI belum tersedia.</p>";
- }
+    const data=await res.json();
+    const jawaban=data.answer||data.response||data.message||"Maaf, belum ada jawaban.";
 
- box.scrollTop=box.scrollHeight;
+    box.innerHTML+="<p><b>TYAN AI:</b> "+jawaban+"</p>";
+    box.scrollTop=box.scrollHeight;
+
+  }catch(e){
+    box.innerHTML+="<p><b>TYAN AI:</b> Koneksi AI sedang bermasalah.</p>";
+  }
 }
+ 
+
+ 
+ 
+
+ 
 </script>
 </body>
 </html>
